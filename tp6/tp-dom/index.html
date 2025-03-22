@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1>Exercice 1 JS :</h1>
+    <h1>Table :</h1>
+    <table border="1">
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+    </table>
+    <button id="nuit" onclick="nuit()">Nuit</button>
+    <button id="jour" onclick="jour()">Jour</button>
+    <br />
+    <br />
+    <hr />
+    <h1>Exercice 2 JS :</h1>
+    <img src="2.jpg" alt="" height="300" width="200" id="img" />
+    <br />
+    <button id="stop" onclick="stop()">stop !</button>
+    <button id="retourne" onclick="retourne()">on y retourne !</button>
+    <br />
+    <br />
+    <hr />
+    <h1>Exercice 3 JS :</h1>
+    <h2 id="count" style="color: crimson;">
+        1
+    </h2>
+    <br />
+    <br />
+    <hr />
+    <h1>Exercice 4 JS :</h1>
+    <h1>Liste de coures</h1>
+    <label for="input">enter votre objet : </label>
+    <input type="text" id="input">
+    <button id="ajouter" onclick="ajouter()">Ajouter l'objet</button>
+    <ul>
+        
+    </ul>
+  </body>
+  <script>
+    let n = document.getElementById("nuit");
+    let j = document.getElementById("jour");
+    let s = document.getElementById("stop");
+    let r = document.getElementById("retourne");
+    let nuit = () => {
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
+    };
+    let jour = () => {
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+    };
+   
+    var ch = setInterval(() => {
+      let src = document.getElementById("img").getAttribute("src");
+
+      if (src === "2.jpg") {
+        document.getElementById("img").setAttribute("src", "1.jpg");
+      } else {
+        document.getElementById("img").setAttribute("src", "2.jpg");
+      }
+    }, 2000); 
+    let stop = () => {
+        clearInterval(ch)
+        
+    };
+    let retourne = () => {
+        ch = setInterval(() => {
+      let src = document.getElementById("img").getAttribute("src");
+
+      if (src === "2.jpg") {
+        document.getElementById("img").setAttribute("src", "1.jpg");
+      } else {
+        document.getElementById("img").setAttribute("src", "2.jpg");
+      }
+    }, 2000); 
+
+    };
+   /* let c=setInterval(() => {
+        document.getElementById("count").textContent=Number(document.getElementById("count").textContent)+1
+        if(  document.getElementById("count").textContent==11)
+        {
+            clearInterval(c)    
+            document.getElementById("count").textContent=10
+            alert("Hello fin 10seconde!!")
+
+
+        }
+        
+    }, 1000);*/
+    let ajouter=()=>{
+        let content=document.getElementById("input").value
+        let list=document.querySelector("ul")
+        let li=document.createElement("li")
+        let span=document.createElement("span")
+        let button=document.createElement("button")
+        console.log(content)
+        button.setAttribute("onclick","supprimer('"+content+"')")
+        button.textContent="Supprimer"
+        span.textContent=content
+        li.id=content
+        li.append(span)
+        li.append(button)
+        list.appendChild(li)
+
+    }
+    let supprimer=(content)=>{
+       document.getElementById(content).remove()
+
+    }
+  </script>
+</html>
