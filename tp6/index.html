@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 6 : Manipuler les éléments dune page avec dom</title>
+  </head>
+  <style>
+    .list li {
+      padding: 10px;
+      border-radius: 7px;
+      background-color: rgba(137, 43, 226, 0.39);
+      border: 1px solid black;
+      width: 100px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .poste {
+      padding: 20px;
+      border: 1px solid;
+      margin-top: 10px;
+    }
+    #comm {
+      background-color: rgba(81, 104, 96, 0.26);
+      padding: 7px;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <h1>Lab 6 : Manipuler les éléments d’une page avec dom</h1>
+    <h2>Activité 1 : Comprendre l’arbre dom, les nœuds parents et enfants</h2>
+    <h3>Exercice 1 :</h3>
+    <div>
+      <div>
+        <input type="text" id="input" />
+        <button onclick="ajouter()">Ajouter</button>
+        <button onclick="supprimer()">Supprimer</button>
+      </div>
+      <div>
+        <ul class="list"></ul>
+      </div>
+    </div>
+    <br /><br />
+    <h3>Exercice 2 :</h3>
+    <input type="text" placeholder="Ajouter poste" id="add" />
+    <button onclick="ajouter_poste()">Ajouter</button>
+    <div id="postes"></div>
+
+    <br><br><hr><br><br><br>
+    <div>
+        <h2>        Activité 2 : Gérer les événements utilisateur      <h3>Exercice 1 :</h3>
+        </h2>
+          <h1>Histoires</h1>
+      <ul>
+        <li>Nom : <input type="text" id="nom" /></li>
+        <li>Adjectif: <input type="text" id="adj" /></li>
+        <li>Nom d'une personne: <input type="text" id="pers" /></li>
+      </ul>
+
+      <button id="raconter" onclick="raconterHistoire()">Raconte une histoire</button>
+      <div id="histoire"></div>
+    </div>
+  </body>
+  <script>
+    let ajouter = () => {
+      let content = document.getElementById("input").value;
+      let list = document.querySelector("ul");
+      let li = document.createElement("li");
+      let span = document.createElement("span");
+
+      span.textContent = content;
+      li.id = content;
+      li.setAttribute("onclick", "color('" + content + "')");
+      li.append(span);
+      list.appendChild(li);
+    };
+    let color = (content) => {
+      document.getElementById(content).style.backgroundColor = "red";
+      document.getElementById(content).className = "active";
+    };
+    let supprimer = () => {
+      let actives = document.querySelectorAll(".active");
+      for (let i = 0; i < actives.length; i++) {
+        actives.item(i).remove();
+      }
+    };
+    let ajouter_poste = () => {
+      let postes = document.querySelector("#postes");
+      let poste = document.createElement("div");
+      poste.className = "poste";
+      let titre = document.createElement("h1");
+
+      titre.textContent = document.querySelector("#add").value;
+      titre.id = titre.textContent;
+      let add_commentaire = document.createElement("input");
+      let btn = document.createElement("button");
+      add_commentaire.className = titre.textContent;
+      btn.textContent = "Add commentaire";
+      btn.setAttribute(
+        "onclick",
+        "add_commentaire('" + titre.textContent + "')"
+      );
+      postes.appendChild(poste);
+      poste.appendChild(titre);
+      poste.appendChild(add_commentaire);
+      poste.appendChild(btn);
+    };
+    let add_commentaire = (c) => {
+      let e = document.querySelector("#" + c);
+      let comm = document.createElement("h6");
+      comm.textContent = document.querySelector("." + c).value;
+      comm.id = "comm";
+      document.querySelector("#" + c).appendChild(comm);
+    };
+    let raconterHistoire=()=>{
+        let nom=document.querySelector("#nom")
+        let adj=document.querySelector("#adj")
+        let pers=document.querySelector("#pers")
+        let h=document.querySelector("#histoire")
+        let label_nom=document.createElement("h1")
+        let label_adj=document.createElement("h2")
+        let label_pers=document.createElement("h3")
+        label_nom.textContent=nom.textContent
+        adj.textContent=adj.textContent
+        pers.textContent=pers.textContent
+        h.appendChild(label_adj)
+
+    }
+  </script>
+</html>

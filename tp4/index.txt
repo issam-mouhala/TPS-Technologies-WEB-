@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Price Tiers</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="stylesheet" href="app.css">
+</head>
+<style>
+    body{
+    background-color: rgba(255, 255, 255, 0.999);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.panel{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.pricing-plan{
+    background-color: rgb(255, 255, 255);  
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(66, 49, 49, 0.103);
+    box-shadow: 1px 1px 7px rgba(128, 128, 128, 0.5);
+    transition: transform ease 1s;
+    border-image: linear-gradient(to bottom,rgb(255, 255, 255),rgba(17, 165, 233, 0.603),white) 1;
+    animation:border 1s infinite ease;
+
+
+}
+img{
+    background-color: #fdfeff13;
+}
+@keyframes border {
+    to{
+        border-image: linear-gradient(to bottom,rgb(255, 255, 255),rgba(233, 17, 82, 0.603),white) 1;
+
+    }
+    
+}
+.pricing-plan:hover{
+    transform: translateY(-4px);
+}
+.pricing-plan h2{
+    font-size: x-large;
+    color: rgb(87, 80, 80);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   padding-top: 20px;
+
+}
+ul{
+    list-style: none;
+    list-style-type: none;
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+
+
+    
+}
+li{
+    color: #60A9FF;
+    margin: 0;
+
+text-align: center;  
+  padding: 20px 0;
+    border: 1px  solid #60aaff25;
+    border-left: 1px ;
+    border-right: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-wrap: wrap;
+    width: 300px;
+    height: 100px;
+     
+
+
+}
+span{
+    font-size: 40px;
+    padding: 10px;
+    color: #0077ff;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+a{
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 1px 5px;
+    color: black;
+    border: 1px solid rgb(75, 151, 238);
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-top: 10px;
+    font-size: x-large;
+    color: #60A9FF;
+    box-shadow:  0px 0px 9px rgba(87, 83, 83, 0.596);
+    
+}
+.pricing-plan:nth-child(2) a{
+    background-color: #2F3676;
+    color: #ffffff;
+}
+a:hover{
+    background-color: #5C63AB;
+    color: #ffffff;
+    
+}
+@media screen and (max-width: 1080px) {
+    .panel{
+        flex-direction: column;
+        height:100%;
+        background-color: transparent;
+        
+
+    }
+    .pricing-plan{
+        border: 1px solid rgb(209, 206, 206);
+    }
+
+    
+  }
+.cadre{
+    display: flex;
+    gap: 15px;
+}
+.cadre .item{
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    transition: 0.4s ease;
+    cursor: pointer;
+    background-color: coral;
+}
+.cadre:hover >:not(:hover){
+    filter: blur(50px);
+    opacity: 0.5;
+}
+.item:hover{
+    background-color: rgb(12, 12, 11);
+}
+h1{
+ color: #ffffff;
+ font-size: 100px;   
+ padding: 100px;
+ font-weight: 900;
+ background-image: url("1301339.jpg");
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+}
+
+</style>
+<body>
+    
+    
+    <div class="panel pricing-table">
+
+        <div class="pricing-plan">
+            <img src="icon1.png" alt="" class="pricing-img">
+            <h2 class="pricing-header">Personal</h2>
+            <ul class="pricing-features">
+                <li class="pricing-features-item" >Custom domains</li>
+                <li class="pricing-features-item">Sleeps after 30 mins of inactivity</li>
+            </ul>
+            <span class="pricing-price">Free</span>
+            <a href="#/" class="pricing-button">Sign up</a>
+        </div>
+
+        <div class="pricing-plan">
+            <img src="icons/icon2.png" alt="" class="pricing-img">
+            <h2 class="pricing-header">Small team</h2>
+            <ul class="pricing-features">
+                <li class="pricing-features-item">Never sleeps</li>
+                <li class="pricing-features-item">Multiple workers for more powerful apps</li>
+            </ul>
+            <span class="pricing-price">$150</span>
+            <a href="#/" class="pricing-button is-featured">Free trial</a>
+        </div>
+
+        <div class="pricing-plan">
+            <img src="icons/icon3.png" alt="" class="pricing-img">
+            <h2 class="pricing-header">Enterprise</h2>
+            <ul class="pricing-features">
+                <li class="pricing-features-item">Dedicated</li>
+                <li class="pricing-features-item">Simple horizontal scalability</li>
+            </ul>
+            <span class="pricing-price">$400</span>
+            <a href="#/" class="pricing-button">Free trial</a>
+        </div>
+
+    </div>
+
+    
+
+
+</body>
+
+</html>
