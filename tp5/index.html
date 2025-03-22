@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function somme() {
+          let e1 = parseInt(document.getElementById("e1").value);
+          let e2 = parseInt(document.getElementById("e2").value);
+          let s = e1 + e2;
+          console.log(s);
+        }
+        function permetre() {
+          let e1 = document.getElementById("e1");
+          let e2 = document.getElementById("e2");
+          let c = e1.value;
+          e1.value = e2.value;
+          e2.value = c;
+        }
+        function separer() {
+          let e3 = document.getElementById("e3").value;
+          let i=e3.indexOf(" ")
+          let name=e3.slice(0,i)
+          let prenom=e3.slice(i+1)
+          console.log(name,prenom)
+           document.getElementById("s1").textContent=name;
+           document.getElementById("s2").textContent=prenom;
+    
+          
+          
+        }
+ 
+
+
+      </script>
+  </head>
+  <body>
+    <input placeholder="0" id="e1" />
+    <input placeholder="0" id="e2" />
+    <p>=<span>0</span></p>
+    <button onclick="somme()">Calculer</button>
+    <button onclick="permetre()">permetre</button>
+    <br />
+    <input placeholder="0" id="e3" />
+
+    <button onclick="separer()">Separer</button>
+    <p>Nom :<span id="s1"></span></p>
+    <p>Prenom :<span id="s2"></span></p>
+  </body>
+
+</html>
