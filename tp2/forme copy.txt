@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire</title>
+  </head>
+ <style>
+    div{
+        margin-top: 40px;
+    }
+    div label:first-child:not(#pre,#suff,#nom){
+        font-weight: bolder;
+    }
+   
+ </style>
+  <body>
+    <form action="">
+      <div>
+        <div><label id="pre">Prenom :</label><input />
+       <label>Telphone :</label><input /></div>
+         <div><label id="nom">Nom :</label><input />
+        <label>e-mail :</label><input /></div>
+
+      <div>
+        <label>Evaluation globale de la session de formation :</label>
+        <br>
+        <label for="">Excellent</label>
+        <input type="radio" id="e" name="eva" />
+        <label for="">Bon</label>
+        <input type="radio" id="b" name="eva" />
+        <label for="">Passable</label>
+        <input type="radio" id="p" name="eva" />
+        <label for="">Medicore</label>
+        <input type="radio" id="m" name="eva" />
+      </div>
+      <div>
+        <label>La duree de formation :</label>
+        <div>
+          <label for="" id="suff">Suffisante</label>
+          <input type="radio" name="duree" />
+          <label for="">courte</label>
+
+          <input type="radio" name="duree" />
+          <label for="">A prolonger de</label>
+          <select name="prol" id="">
+            <option value="">deux jours</option>
+            <option value="deux jours">quatre jours</option>
+            <option value="deux jours">semaine</option>
+            <option value="deux jours">deux semaines</option>
+            <option value="deux jours">un mois</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label>vos remarque et suggestions :</label>
+        <br />
+        <textarea name="" id="" cols="20" rows="3"></textarea>
+      </div>
+      <div>
+        <label>Qulles autres formations souhaiteriez-vous recevoir ?  </label>
+        <br>
+        <label for="">Buretique</label>
+        <input type="checkbox" value="Buretique" />
+        <label for="">Reseau</label>
+        <input type="checkbox" value="" />
+        <label for="">VisualC</label>
+        <input type="checkbox" value="" />
+        <label for="">java</label>
+        <input type="checkbox" value="" />
+      </div>
+      <div>
+        <input type="submit" value="Envoyer" />
+        <input type="reset" value="Recommencer a zero" />
+      </div>
+    </form>
+  </body>
+</html>

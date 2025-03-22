@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableau</title>
+  </head>
+  <body>
+    <table border="1" style="width: 70%" align="center">
+      <thead>
+        <tr>
+          <th>Resultat avec Border=0</th>
+          <th>Resultat avec Border=1</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <table  style="width: 100%" >
+              <thead>
+                <tr>
+                  <th colspan="5" align="center">Table des Matieres</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td >
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/red.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="3">partie1</td>
+                  <td align="right">1</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/green.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="2">Chapitre 1</td>
+                  <td align="right">1</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section A</td>
+                  <td align="right">2</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section B</td>
+                  <td align="right">4</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/green.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="2">Chapitre 2</td>
+                  <td align="right">7</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section A</td>
+                  <td align="right">8</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section B</td>
+                  <td align="right">10</td>
+                </tr>
+                <tr>
+                  <td >
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/red.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="3">partie2</td>
+                  <td align="right">13</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/green.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="2">Chapitre 3</td>
+                  <td align="right">15</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section A</td>
+                  <td align="right">18</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section B</td>
+                  <td align="right">21</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/green.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="2">Chapitre 4</td>
+                  <td align="right">24</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section A</td>
+                  <td align="right">26</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section B</td>
+                  <td align="right">29</td>
+                </tr>
+
+                
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <table border="1" style="width: 100%">
+              <thead>
+                <tr>
+                  <th colspan="5" align="center">Table des Matieres</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td >
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/red.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="3">partie1</td>
+                  <td align="right">1</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/green.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="2">Chapitre 1</td>
+                  <td align="right">1</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section A</td>
+                  <td align="right">2</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section B</td>
+                  <td align="right">4</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/green.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="2">Chapitre 2</td>
+                  <td align="right">7</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section A</td>
+                  <td align="right">8</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section B</td>
+                  <td align="right">10</td>
+                </tr>
+                <tr>
+                  <td >
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/red.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="3">partie2</td>
+                  <td align="right">13</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/green.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="2">Chapitre 3</td>
+                  <td align="right">15</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section A</td>
+                  <td align="right">18</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section B</td>
+                  <td align="right">21</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/green.png"
+                      alt=""
+                    />
+                  </td>
+                  <td colspan="2">Chapitre 4</td>
+                  <td align="right">24</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section A</td>
+                  <td align="right">26</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+
+                  <td>
+                    <img
+                      align="right"
+                      width="14"
+                      src="./TP2_etudiants/blue.png"
+                      alt=""
+                    />
+                  </td>
+                  <td>Section B</td>
+                  <td align="right">29</td>
+                </tr>
+
+                
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
