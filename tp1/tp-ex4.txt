@@ -37,13 +37,13 @@
 
     </h2>
 
-    <h2 id="physique" style="height: 100vh;">Les Styles Physique        <h2><a href="#retour">retoure</a></h2>
-</h2>
-    <h2 id="org" style="height: 100vh;">Les Balise d'Organisation        <h2><a href="#retour">retoure</a></h2>
-</h2>
-    <h2 id="graphe" style="height: 100vh;">Les graphe        <h2><a href="#retour">retoure</a></h2>
-</h2>
-    <h2 id="Listes" style="height: 100vh;">Les Listes et Definition        <h2><a href="#retour">retoure</a></h2>
-</h2>
+    <h2 id="physique" style="height: 100vh;">Les Styles Physique  </h2>      <h2><a href="#retour">retoure</a></h2>
+
+    <h2 id="org" style="height: 100vh;">Les Balise d'Organisation     </h2>   <h2><a href="#retour">retoure</a></h2>
+
+    <h2 id="graphe" style="height: 100vh;">Les graphe       </h2> <h2><a href="#retour">retoure</a></h2>
+
+    <h2 id="Listes" style="height: 100vh;">Les Listes et Definition  </h2>      <h2><a href="#retour">retoure</a></h2>
+
 </body>
 </html>
