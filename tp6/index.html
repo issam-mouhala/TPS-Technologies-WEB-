@@ -46,20 +46,53 @@
     <button onclick="ajouter_poste()">Ajouter</button>
     <div id="postes"></div>
 
-    <br><br><hr><br><br><br>
+    <br /><br />
+    <hr />
+    <br /><br /><br />
     <div>
-        <h2>        Activité 2 : Gérer les événements utilisateur      <h3>Exercice 1 :</h3>
-        </h2>
-          <h1>Histoires</h1>
+      <h2>
+        Activité 2 : Gérer les événements utilisateur
+        <h3>Exercice 1 :</h3>
+      </h2>
+      <h1>Histoires</h1>
       <ul>
         <li>Nom : <input type="text" id="nom" /></li>
         <li>Adjectif: <input type="text" id="adj" /></li>
         <li>Nom d'une personne: <input type="text" id="pers" /></li>
       </ul>
 
-      <button id="raconter" onclick="raconterHistoire()">Raconte une histoire</button>
+      <button id="raconter" onclick="raconterHistoire()">
+        Raconte une histoire
+      </button>
       <div id="histoire"></div>
     </div>
+    <h2>Activité 3 : Gérer les éléments d’un formulaire</h2>
+    <h1 style="text-align: center">Formulaire d'inscription</h1>
+    <form
+      name="formInscp"
+      action=""
+      onsubmit="return validation()"
+      method="post"
+    >
+      <p>Nom: <input type="text" size="65" name="nom" /></p>
+      <p>Adresse: <input type="text" size="65" name="adresse" /></p>
+      <p>Adresse E-mail : <input type="email" size="65" name="email" /></p>
+      <p>Mot de passe : <input type="password" size="65" name="motPasse" /></p>
+      <p>Telephone: <input type="text" size="65" name="telephone" /></p>
+      <p>
+        Langue :
+        <select type="text" value="" name="langue">
+          <option>Anglais</option>
+          <option>Français</option>
+          <option>Arabe</option>
+        </select>
+      </p>
+      <p>Commentaire: <textarea cols="55" name="commentaire"> </textarea></p>
+      <p>
+        <input type="submit" value="Valider" name="Valider" />
+        <input type="reset" value="Annuler" name="Annuler" />
+      </p>
+    </form>
   </body>
   <script>
     let ajouter = () => {
@@ -112,19 +145,51 @@
       comm.id = "comm";
       document.querySelector("#" + c).appendChild(comm);
     };
-    let raconterHistoire=()=>{
-        let nom=document.querySelector("#nom")
-        let adj=document.querySelector("#adj")
-        let pers=document.querySelector("#pers")
-        let h=document.querySelector("#histoire")
-        let label_nom=document.createElement("h1")
-        let label_adj=document.createElement("h2")
-        let label_pers=document.createElement("h3")
-        label_nom.textContent=nom.textContent
-        adj.textContent=adj.textContent
-        pers.textContent=pers.textContent
-        h.appendChild(label_adj)
+    let raconterHistoire = () => {
+      let nom = document.querySelector("#nom");
+      let adj = document.querySelector("#adj");
+      let pers = document.querySelector("#pers");
+      let h = document.querySelector("#histoire");
+      let label_nom = document.createElement("h1");
+      let label_adj = document.createElement("h2");
+      let label_pers = document.createElement("h3");
+      label_nom.textContent = nom.textContent;
+      adj.textContent = adj.textContent;
+      pers.textContent = pers.textContent;
+      h.appendChild(label_adj);
+    };
+    function validation() {
+    var form = document.forms["formInscp"];
+    var nom = form["nom"].value.trim();
+    var adresse = form["adresse"].value.trim();
+    var email = form["email"].value.trim();
+    var motPasse = form["motPasse"].value.trim();
+    var telephone = form["telephone"].value.trim();
+    var langue = form["langue"].value.trim();
+    var commentaire = form["commentaire"].value.trim();
 
+    if (nom === "" || adresse === "" || email === "" || motPasse === "" || 
+        telephone === "" || langue === "" || commentaire === "") {
+        alert("Tous les champs sont obligatoires.");
+        return false;
     }
+
+    // Validation de l'email
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Veuillez entrer une adresse email valide.");
+        return false;
+    }
+
+    // Validation du téléphone (exemple : 10 chiffres)
+    var phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(telephone)) {
+        alert("Veuillez entrer un numéro de téléphone valide (10 chiffres).");
+        return false;
+    }
+
+    return true;
+}
+
   </script>
 </html>
