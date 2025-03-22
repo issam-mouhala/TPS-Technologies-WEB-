@@ -2,142 +2,139 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPS Technologies WEB | By Issam Mouhala, Khadija Iharchache & Osama Jami</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #eceff1, #f5f5f5);
+    }
+    .navbar {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .title {
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+      color: #333;
+      text-transform: uppercase;
+    }
+    .tp-card {
+      border: none;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 10px;
+      background: #fff;
+    }
+    .tp-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    .tp-card h5 {
+      font-weight: bold;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      background: #343a40;
+      color: #fff;
+    }
+  </style>
 </head>
-<style>
-  .d-flex {
-    margin-top: 40px;
-    text-wrap: wrap;
-  }
-
-  h1 {
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.068);
-    padding: 10px;
-    box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.137),
-      inset 0px 0px 21px rgba(0, 0, 0, 0.11);
-    color: rgba(0, 0, 0, 0.637);
-    font-family: 'Times New Roman', Times, serif;
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
-
-
-  }
-  h2{
-    text-align: center;
-    padding: 10px;
-    clip-path: polygon(0 0, 100% 13%, 100% 89%, 0% 100%);
-    background-color: rgba(0, 0, 0, 0.048);
-
-
-
-
-  }
-  .mt-3 >h1{
-    text-align:center ;
-  }
- 
-  h2:hover{
-    background-color: rgb(0, 0, 0);
-    color: aliceblue;
-
-
-  }
-  a{
-    text-decoration: none;
-    color: black;
-  }
-
-  img {
-    width: 300px;
-  }
-  .p-2{
-    width: 100px;
-
-  }
-  span{
-   text-decoration: underline;
-   font-weight: bolder;
-  }
- 
-</style>
 
 <body>
-
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="javascript:void(0)">TPS Technologies WEB </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">TPS Technologies WEB</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="javascript:void(0)">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Link</a>
-          </li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cours</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         </ul>
-
       </div>
     </div>
   </nav>
 
-  <div class="container-fluid mt-3">
-    <h1> Les Travaux Pratique</h3>
+  <div class="container mt-4">
+    <h1 class="title">Les Travaux Pratiques</h1>
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card tp-card p-3">
+          <h5>TP1 : HTML & CSS</h5>
+          <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary">Voir TP</a>
+            <a href="#" class="btn btn-warning">Code source</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card tp-card p-3">
+          <h5>TP2 : HTML & CSS (Suite)</h5>
+          <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary">Voir TP</a>
+            <a href="#" class="btn btn-warning">Code source</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card tp-card p-3">
+          <h5>TP3 : Les feuilles de style CSS</h5>
+          <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary">Voir TP</a>
+            <a href="#" class="btn btn-warning">Code source</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card tp-card p-3">
+          <h5>TP4 : Mini-projet : Pricing Panel</h5>
+          <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary">Voir TP</a>
+            <a href="#" class="btn btn-warning">Code source</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card tp-card p-3">
+          <h5>TP5 : Les fondamentaux JavaScript</h5>
+          <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary">Voir TP</a>
+            <a href="#" class="btn btn-warning">Code source</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card tp-card p-3">
+          <h5>TP6 : Manipuler le DOM</h5>
+          <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary">Voir TP</a>
+            <a href="#" class="btn btn-warning">Code source</a>
+          </div>
+        </div>
+      </div>
 
-  </div>
-  <div class="d-flex flex-wrap align-content-center">
-    <div class="p-2 bg-info flex-fill align-content-center">
-      <a href=""><h1><span>Tp1:</span>  HTML & CSS </h1></a>
     </div>
-    <div class="p-2 bg-warning flex-fill">
-      <a href=""><h2>Code source</h2></a>
-    </div>
-  </div>
-  <div class="d-flex flex-wrap align-content-center">
-    <div class="p-2 bg-info flex-fill align-content-center">
-     <a href=""> <h1><span>Tp2:</span>HTML & CSS (Suite) </h1></a>
-    </div>
-    <div class="p-2 bg-warning flex-fill">
-      <a href=""><h2>Code source</h2></a>    </div>
-  </div>
-  <div class="d-flex flex-wrap align-content-center">
-    <div class="p-2 bg-info flex-fill align-content-center">
-     <a href=""><h1><span>Tp3:</span>Les feuilles de style CSS</h1></a> 
-    </div>
-    <div class="p-2 bg-warning flex-fill">
-      <a href=""><h2>Code source</h2></a>    </div>
-  </div>
-  <div class="d-flex flex-wrap align-content-center">
-    <div class="p-2 bg-info flex-fill align-content-center">
-      <a href=""><h1><span>Tp4:</span> Mini-projet : pricing panel project</h1></a>
-    </div>
-    <div class="p-2 bg-warning flex-fill">
-      <a href=""><h2>Code source</h2></a>    </div>
-  </div>
-  <div class="d-flex flex-wrap align-content-center">
-    <div class="p-2 bg-info flex-fill align-content-center">
-     <a href=""><h1><span>Tp5:</span>Les fondamentaux JavaScript</h1></a> 
-    </div>
-    <div class="p-2 bg-warning flex-fill">
-      <a href=""><h2>Code source</h2></a>    </div>
-  </div>
-  <div class="d-flex flex-wrap align-content-center">
-    <div class="p-2 bg-info flex-fill align-content-center">
-   <a href=""><h1><span>Tp6:</span>Manipuler les éléments d’une page avec dom</h1></a>   
-    </div>
-    <div class="p-2 bg-warning flex-fill">
-      <a href=""><h2>Code source</h2></a>    </div>
   </div>
 
+  <footer class="footer">
+    <p>© 2025 TPS Technologies WEB | By Issam Mouhala, Khadija Iharchache & Osama Jami</p>
+  </footer>
 </body>
 
 </html>
