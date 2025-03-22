@@ -1,75 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tp1-ex2</title>
+
+    <style>
+      ol.main{
+          list-style-type: decimal;
+          padding-left: 20px;
+      }
+      ol.alpha{
+          list-style-type: upper-alpha;
+          padding-left: 20px;
+      }
+      ol.lower_alpha{
+          list-style-type: lower-alpha;
+          padding-left: 20px;
+      }
+      ol.dot{
+          list-style-type: disc;
+          padding-left: 20px;
+      }
+      ol.dot2{
+          list-style-type: circle;
+      }
+  </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">TPS Technologies WEB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="../index.html">Accueil</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <h3>Plan de Windows</h3>
+      <ol class="main">
+          <li>Souris</li>
+          <li>Clavier
+              <ol class="alpha">
+                  <li>Langue</li>
+                  <li>Equivalents clavier</li>
+              </ol>
+          </li>
+          <li>l'environnement
+              <ol class="alpha">
+                  <li>le bureau</li>
+                  <li>les fenetre 
+                      <ol class="lower_alpha">
+                          <li>agrandir</li>
+                          <li>Reduire</li>
+                          <li>Respositionner</li>
+                      </ol>
+                  </li>
+                  <li>les icones 
+                      <ol class="lower_alpha">
+                          <li>Poste de travail
+                              <ol class="dot">
+                                  <li>Formatter la disquette</li>
+                                  <li>Copier la disquette</li>
+                              </ol>
+                          </li>
+                          <li>la corbeille</li>
+                      </ol>
+                  </li>
+                      <li>la barre de taches
+                          <ol class="lower_alpha">
+                              <li>Ajout au menu "Demarreer"</li>
+                              <li>Programmes
+                                  <ol class="dot">
+                                      <li>Accessoire</li>
+                                      <ol class="dot2">
+                                          <li>la calculatrice</li>
+                                          <li>le Bloc-Notes</li>
+                                          <li>WordPad</li>
+                                          <li>Paint</li>
+                                      </ol>
+                                      <li>Button "Demarrer"</li>
+                                  <li>l'explorateur Windows</li>
+                                  </ol>  
+                              </li>
+                              <li>Parmetres
+                                  <ol class="dot">
+                                      <li>Panneau de configuration
+                                          <ol class="dot2">
+                                              <li>Ajour de periperiques</li>
+                                              <li>Ajout de programmes</li>
+                                              <li>Affichage</li>
+                                              <li>Polices</li>
+                                              <li>Imprimantes</li>
+                                          </ol>
+                                      </li>
+                                      <li>Barre de taches</li>
+                                      <li>Imprimantes</li>
+                                  </ol>
+                              </li>
+                              <li>Rechercher</li>
+                              <li>Aide</li>
+                              <li>Executer</li>
+                              <li>Arreter</li>
+                          </ol>
+                      </li>
+                      <li>Menu systeme</li>
+              </ol>
+          </li>
+          <li>l'Ecran</li>
+          <li>l'Ordinateur</li>
+
+      </ol>
+  </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2</title>
+    <title>Document</title>
+
 </head>
 <body>
-    <FONT color="#0000FF" size=5 face="Times New Roman"> <center> <b> Plan de Windows</b> </center></FONT>
-    <ol>
-        <li> souris </li>
-        <li> clavier </li>
-        <ol type="A">
-            <li> Langue</li>
-            <li> Equivalent clavier</li>
-        </ol>
-        <li> l'environnement </li>
-        <ol type="A">
-            <li> le bureau</li>
-            <li> Les fenetres </li>
-            <ol type="a">
-                <li> agrandir</li>
-                <li>reduire </li>
-                <li>repositioner</li>
-            </ol>
-            <li> Les icones </li>
-            <ol type="a">
-                <li> poste de travail</li>
-                <ul type="disc">
-                    <li>formater la disquette</li>
-                  <li>copier la disquette</li>
-                </ul>
-                <li> la corbeille</li>
-            </ol>
-            <li> La barre des taches </li>
-            <ol type="a">
-                <li> ajout au menu "Demarrer"</li>
-                <li> programmes</li>
-                <ul type="disc">
-                    <li>Accessoires</li>
-                    <ul type="circle">
-                        <li>la calculatrice </li>
-                        <li>le bloc notes</li>
-                        <li>WordPad</li>
-                        <li>paint </li>
-                    </ul>
-                    <li>bouton "Demmarrer"</li>
-                    <li>L'explorateur Windows</li>
-                    </ul>
-                    <li>parametres</li>
-                    <ul type="disc">
-                        <li>paneau de configuration</li>
-                        <ul type="circle">
-                            <li>ajout de peripheriques</li>
-                            <li>ajout de programmes</li>
-                            <li>affichage</li>
-                            <li>polices</li>
-                            <li>imprimantes</li>
+
     
-                        </ul>
-                        <li> barre de taches</li>
-                        <li>imprimmantes</li>
-                    </ul>
-                    <li>rechercher</li>
-                    <li>aide</li>
-                    <li>executer</li>
-                    <li>arreter</li>
-                    </ol>
-                    <li>menu systeme</li>
-        </ol>
-        <li>l'Ecran</li>
-        <li>L'Ordinateur</li>
-    </ol>
+
 </body>
 </html>
