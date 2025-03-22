@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tp1</title>
+  </head>
+  <style>
+    * {
+      color: blue;
+    }
+  </style>
+  <body
+    bgcolor="gray
+  "
+  >
+    <hr color="red" width="300" />
+    <h1 style="text-align: center">CURRICULUM VITE</h1>
+    <hr color="red" width="300" />
+    <hr color="green" />
+    <h2 style="text-align: center"><i>cordonne</i></h2>
+    <hr color="green" />
+    <ul>
+      <li>Adress:..........</li>
+      <li>Tel:............</li>
+      <li>Fax:...............</li>
+      <li>E-mail:............</li>
+    </ul>
+    <hr color="green " />
+    <h2 style="text-align: center"><i>Profil de formation</i></h2>
+    <hr color="green " />
+    <ol>
+      <li>
+        Ecole primaire
+        <ul>
+          <li>meknes</li>
+        </ul>
+      </li>
+      <li>
+        Ecole secondaire
+        <ul type="cercl">
+          <li>lysee ibn bajja</li>
+        </ul>
+      </li>
+      <li>
+        Universite
+        <ul type="cercl">
+          <li>sidi mohamed .......</li>
+        </ul>
+      </li>
+    </ol>
+    <hr color="green " />
+    <h2 style="text-align: center">Diplomes</h2>
+    <ul type="none">
+      <li>
+        2002
+        <ul type="none">
+          <li>Certficate dwe fin d etude secondaire</li>
+        </ul>
+      </li>
+      <li>
+        2006
+        <ul type="none">
+          <li>Licence Scence Mathematique et informatique</li>
+        </ul>
+      </li>
+    </ul>
+    <hr color="green " />
+    <h2 style="text-align: center">loisir</h2>
+
+    <hr color="green " />
+    <ul type="none">
+      <li>->Sport</li>
+      <li>->Musique</li>
+      <li>->Informatique</li>
+    </ul>
+  </body>
+</html>
