@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.article {
+    width: 300px;
+    background-color: lightgray;
+    padding: 100px;
+}
+
+.details {
+    background-color: blue;
+    padding: 5px;
+    
+    margin: 50px 0px 50px 50px;
+}
+
+.fix {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: blue;
+    padding: 10px;
+    color : white;
+}

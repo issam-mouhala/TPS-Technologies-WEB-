@@ -1,0 +1,9 @@
+div {
+    background-color:rgb(133, 196, 252) ;
+    border: goldenrod 4px solid ;
+    border-top-right-radius: 50%;
+}
+h3{
+    color: blue;
+    text-decoration: underline red;
+}
