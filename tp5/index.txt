@@ -1,52 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP5 JavaScript</title>
+</head>
+<body>
+    <h1>Exercice 1 : Somme de deux valeurs </h1>
+    <input type="number" id="val1">
+    <input type="number" id="val2">
+    <button onclick="calculerSomme()">Calculer</button>
+    <label id="resultat"></label>
+
+    <h1>Exercice 2 : Permutation des valeurs</h1>
+    <input type="text" id="champ1">
+    <input type="text" id="champ2">
+    <button onclick="permuter()">Permuter</button>
+
+    <h1>Exercice 3 : Séparation Nom et Prénom</h1>
+    <input type="text" id="nomComplet" placeholder="Nom Prénom">
+    <button onclick="separerNomPrenom()">Séparer</button>
+    <label id="nom"></label>
+    <label id="prenom"></label>
+
+    <h1>Exercice 4 : Affichage de 20 à 0</h1>
+    <p id="ex4"></p>
+
+    <h1>Exercice 5 : Vérification de 3 variables</h1>
+    <p id="ex5"></p>
+
+    <h1>Exercice 6 : Affichage en pyramide</h1>
+    <pre id="ex6"></pre>
+
+    <h1>Exercice 7 : Saisie d'une note entre 0 et 20</h1>
+    <p id="ex7"></p>
+
+    <h1>Exercice 8 : Gestion des exceptions pour une note hors intervalle</h1>
+    <p id="ex8"></p>
+
+    <h1>Exercice 9 : Manipulation d'objets</h1>
+    <p id="ex9"></p>
+
     <script>
-        function somme() {
-          let e1 = parseInt(document.getElementById("e1").value);
-          let e2 = parseInt(document.getElementById("e2").value);
-          let s = e1 + e2;
-          console.log(s);
+        function calculerSomme() {
+            let val1 = parseFloat(document.getElementById("val1").value) || 0;
+            let val2 = parseFloat(document.getElementById("val2").value) || 0;
+            document.getElementById("resultat").textContent = "Résultat : " + (val1 + val2);
         }
-        function permetre() {
-          let e1 = document.getElementById("e1");
-          let e2 = document.getElementById("e2");
-          let c = e1.value;
-          e1.value = e2.value;
-          e2.value = c;
+
+        function permuter() {
+            let champ1 = document.getElementById("champ1");
+            let champ2 = document.getElementById("champ2");
+            let temp = champ1.value;
+            champ1.value = champ2.value;
+            champ2.value = temp;
         }
-        function separer() {
-          let e3 = document.getElementById("e3").value;
-          let i=e3.indexOf(" ")
-          let name=e3.slice(0,i)
-          let prenom=e3.slice(i+1)
-          console.log(name,prenom)
-           document.getElementById("s1").textContent=name;
-           document.getElementById("s2").textContent=prenom;
-    
-          
-          
+
+        function separerNomPrenom() {
+            let nomComplet = document.getElementById("nomComplet").value.trim();
+            let indexEspace = nomComplet.indexOf(" ");
+            if (indexEspace !== -1) {
+                document.getElementById("nom").textContent = "Nom : " + nomComplet.slice(0, indexEspace);
+                document.getElementById("prenom").textContent = "Prénom : " + nomComplet.slice(indexEspace + 1);
+            } else {
+                alert("Veuillez entrer un nom et un prénom !");
+            }
         }
- 
 
+        let ex4 = document.getElementById("ex4");
+        for (let i = 20; i >= 0; i -= 2) {
+            ex4.innerHTML += i + "<br>";
+        }
 
-      </script>
-  </head>
-  <body>
-    <input placeholder="0" id="e1" />
-    <input placeholder="0" id="e2" />
-    <p>=<span>0</span></p>
-    <button onclick="somme()">Calculer</button>
-    <button onclick="permetre()">permetre</button>
-    <br />
-    <input placeholder="0" id="e3" />
+        let a = prompt("Entrez un nombre :");
+        let b = prompt("Entrez un autre nombre :");
+        let c = prompt("Entrez un troisième nombre :");
+        let ex5 = document.getElementById("ex5");
+        if (a === b && b === c) {
+            ex5.textContent = "Les trois variables sont identiques.";
+        } else if (a === b || a === c || b === c) {
+            ex5.textContent = "Deux des variables sont de valeurs égales.";
+        } else {
+            ex5.textContent = "Les trois variables sont différentes.";
+        }
 
-    <button onclick="separer()">Separer</button>
-    <p>Nom :<span id="s1"></span></p>
-    <p>Prenom :<span id="s2"></span></p>
-  </body>
+        let etoiles = "";
+        let ex6 = document.getElementById("ex6");
+        for (let i = 1; i <= 5; i++) {
+            etoiles += "*";
+            ex6.innerHTML += etoiles + "<br>";
+        }
 
+        let note;
+        do {
+            note = parseFloat(prompt("Entrez une note entre 0 et 20 :"));
+        } while (note < 0 || note > 20);
+        document.getElementById("ex7").textContent = "Note validée : " + note;
+
+        try {
+            let note = parseFloat(prompt("Entrez une note entre 0 et 20 :"));
+            if (note < 0 || note > 20 || isNaN(note)) {
+                throw new Error("Note hors intervalle");
+            }
+            document.getElementById("ex8").textContent = "Note valide : " + note;
+        } catch (error) {
+            document.getElementById("ex8").textContent = error.message;
+        }
+
+        class Personne {
+            constructor(nom, age) {
+                this.nom = nom;
+                this.age = age;
+            }
+            decrire() {
+                return `${this.nom}, ${this.age} ans`;
+            }
+        }
+        let ali = new Personne("Ali", 19);
+        document.getElementById("ex9").textContent = ali.decrire();
+    </script>
+</body>
 </html>
