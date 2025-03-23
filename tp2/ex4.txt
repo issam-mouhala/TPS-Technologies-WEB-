@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        table{
+            
+            border-collapse :collapse;
+            background-color: rgb(204, 204, 204);
+        }
+        th,span{
+            color: blue;
+            font-family:cursive;
+        }
+    </style>
+</head>
+<body >
+    <div>
+        <h1>Site d'enigmes</h1>
+    </div>
+    <div >
+
+        
+        
+    
+    <div  style="height: 90vh; background-color: green; display: flex ; justify-content: space-around;">
+        <div style="width: 150px;">
+            <div style=" background-color: grey;"><div  style="  width: 90%; background-color: yellow;"> <p>Accuceil</p></div></div>
+            <div style="background-color: grey;"><div style="width: 90%; background-color: yellow;"> <p>Questionnaire</p></div></div>
+            <div style="background-color: grey;"><div style="width: 90%; background-color: yellow;"> <p>Score</p></div></div>
+        </div>
+        <div>
+            <h1>Score obtenu</h1>
+            <p>Voici le score que vous avez obtenu pour les differentes questions :</p>
+            <table border="1px" >
+                <tr>
+                    <th>Question n *</th>
+                    <th>Nombre total de points </th>
+                    <th>Total obtenu</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>2</td>
+                </tr>
+            </table>
+
+            <span>Note total : 14/20</span>
+        </div>
+        
+
+    </div>
+
+</div>
+</body>
+</html>

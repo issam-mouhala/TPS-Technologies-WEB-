@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background-image: linear-gradient(white, #ADDBE6, white);
+    border-style: groove;
+    border-color: #00b5fd; 
+    position: absolute;
+    width: 400px;
+    top: 186px;
+    color: blue;
+    background-color: lightblue;
+    border-radius: 30%;
+    border-style: solid;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+
+}
+label{
+    padding-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 70%;
+    height: 4px;
+    padding: 8px;
+    background-color: #e3f541;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    border-left-color: red;
+    border-right-color: red;
+}
+
+
+

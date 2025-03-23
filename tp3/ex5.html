@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-image: url('./image/arriere-plans-des-pages-Web.jpg');
+            background-size: cover;
+            border: 3px double blue;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            height: 80px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: #b1b0b0;
+            border: 3px double blue;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: flex;
+            margin: 20px;
+        }
+
+        .scrollable {
+            flex: 2;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #686868;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .scrollable div {
+            background-color: #47b8c0;
+            border: 3px solid #0c1964;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .scrollable img {
+            display: block; /* Pour placer l'image au-dessus du texte */
+            height: 100px;
+            width: 200px;
+            margin: 0 auto 15px auto; /* Centrer l'image et ajouter une marge en bas */
+            border-radius: 8px;
+        }
+
+        .scrollable p {
+            text-align: justify; /* Justifier le texte */
+        }
+
+        .about-me {
+            flex: 1;
+            margin-left: 20px;
+            padding: 20px;
+            background-color: #686868;
+            border: 3px solid #0c1964;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .about-me img {
+            width: 100px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #686868;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="./image/logo.jpg" alt="Logo 1">
+            <img class="logo" src="./image/logo.jpg" alt="Logo 2">
+            <img class="logo" src="./image/logo.jpg" alt="Logo 3">
+            <img class="logo" src="./image/logo.jpg" alt="Logo 4">
+            <img class="logo" src="./image/logo.jpg" alt="Logo 5">
+            <img class="logo" src="./image/logo.jpg" alt="Logo 6">
+            <img class="logo" src="./image/logo.jpg" alt="Logo 7">
+        </div>
+    </header>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#cv">CV</a>
+        <a href="#enseignement">Enseignement</a>
+        <a href="#recherche">Recherche</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="main-content">
+        <div class="scrollable">
+            <div>
+                <img src="./image/vision.jpg" alt="Vision par ordinateur">
+                <p>
+                    La perception frémanostrophielle de l’environnement, en particulier, la capacité de produire des modèles de cet environnement à partir des images a une importance inextricabulaire dans le domaine de la vision par ordinateur. Les principaux domaines d’application sont la réalité augmentée, l’animation immobilière, la préservation d’artistes pour la sortie en ligne, l’imagerie médicale et la vision en stockage, etc. Le problème qui se pose alors est de déterminer les caractéristiques informatiques qui constituent le modèle à partir des projections planes, et donc bidimensionnelles, de la scène contenant le modèle.
+                </p>
+            </div>
+            <div>
+                <img src="./image/camera.jpg" alt="Caméra">
+                <p>
+                    Le cadrage d’une caméra consiste à déterminer les paramètres intrinsèques et extrinsèques en utilisant un objet connu appelé mise de cadrage. La mise peut être bidimensionnelle (cadrage 2D) ou tridimensionnelle (cadrage 3D). La connaissance de la mise n’est pas toujours présente dans les applications de vision par ordinateur. Ce qui donne naissance à des nouvelles méthodes appelées auto-cadrage qui permettent de calculer les paramètres intrinsèques et extrinsèques sans aucune connaissance préalable sur la scène. Les méthodes d’auto-cadrage utilisent des scènes 3D ou des scènes planes pour calculer les paramètres de la caméra de manière automatique.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-me">
+            <h4>A propos de moi</h4>
+            <img src="./image/inconnu.gif" alt="Photo de profil">
+            <h4>Diplôme : Master en Informatique</h4>
+            <h4>Domaine de recherche : Vision par ordinateur</h4>
+            <h4>Université : Moulay Ismail</h4>
+            <h4>École : ESTM</h4>
+            <h4>Publication : Auto-calibrage des caméras</h4>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Copyright tous droits réservés</h3>
+    </footer>
+</body>
+</html>

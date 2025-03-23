@@ -1,21 +1,29 @@
-div{
+
+
+
+.article {
+    width: 50%;
+    height: 60vh;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgb(201, 201, 201);
     
-    width: 180px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid blue;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    box-shadow: 20px 10px 15px cyan;
-    opacity: 30%;
-    text-shadow: 10px 5px 10px yellow;
-    font-size: 30px;
-    font-family: 'cursive';
-    border-top-color:transparent;
-    background: url("logo.jpg");
-    background-size: cover;
-    }
+}
 
+.details {
+    width: 60%;
+     background-color: rgb(11, 106, 184);
+    position: absolute;
+    top: 100px;
+    right: 0 ;
+    
+}
 
+.fix {
+    margin: 10px;
+    padding: 5px 20px 5px 5px;
+    background-color: blue;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

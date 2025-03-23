@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../tp3/stylesEx1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>Rouge</div>
+</body>
+</html>
+
+
+/// css
+
+
+div {
+    background-color: red;
+}
+div {
+    width: 200px;
+    height: 100px;
+}
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div {
+    border: 4px solid blue; 
+}
+div {
+    border-radius: 10px;
+}
+div {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+div {
+    box-shadow: 20px 10px 15px cyan;
+}
+div {
+    opacity: 30%;
+}
+div {
+    text-shadow: 10px 5px 10px yellow;
+}
+div {
+    font-size: 30px;
+}
+div {
+    font-family: cursive; 
+}
+div {
+    border-top-color: transparent;
+}
+div {
+    background: url("../tp3/image/logo.jp");
+    background-size: cover;
+}
