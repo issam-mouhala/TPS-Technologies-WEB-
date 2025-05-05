@@ -516,39 +516,19 @@
     <p>© 2025 TPS Technologies WEB | By Issam Mouhala, Khadija Iharchache & Osama Jammi</p>
   </footer>
   <script>
-window.addEventListener("load", function () {
-  const info = {
-    language: navigator.language,
-    resolution: `${screen.width}x${screen.height}`,
-    userAgent: navigator.userAgent,
-    platform: navigator.platform,
-    browser: navigator.appName,
-    browserVersion: navigator.appVersion,
-    screenDepth: screen.colorDepth,
-    timezone: new Date().getTimezoneOffset(),  // Décalage horaire en minutes
-    ipInfo: ''
-  };
-  console.log(info)
-
-  // Récupérer les informations de géolocalisation de l'IP
-
-
-  // Fonction pour envoyer les données à Google Apps Script
-  function sendData(info) {
-    fetch("https://script.google.com/macros/s/AKfycby9lsB7aGfqhsg2PDvxBFq_9hgKLh5GnZIXIDEsBcipdWD0kYoTXVdLlDM_4aNcCWvglw/exec", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(info),
-      mode: "no-cors"
-    })
-    .then(response => {
-    })
-    .catch(error => {
+    window.addEventListener("load", function () {
+      const info = {
+        language: navigator.language,
+        resolution: `${screen.width}x${screen.height}`,
+        userAgent: navigator.userAgent
+      };
+    
+      fetch("https://script.google.com/macros/s/AKfycby9lsB7aGfqhsg2PDvxBFq_9hgKLh5GnZIXIDEsBcipdWD0kYoTXVdLlDM_4aNcCWvglw/exec", {
+        method: "POST",
+        body: JSON.stringify(info),
+        headers: { "Content-Type": "application/json" }
+      });
     });
-  }
-});
-
-
     </script>
     
 </body>
