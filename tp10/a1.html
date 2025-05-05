@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .red {
+      color: red;
+    }
+    .titre {
+      color: aqua;
+      background-color: black;
+    }
+  </style>
+  <body>
+    <button id="button1">Click1</button>
+    <p>issam</p>
+    <div>
+      <button id="button2">Click2</button>
+      <h1>Titre</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum corrupti
+        ipsum libero saepe id repudiandae voluptatibus maxime in perspiciatis,
+        exercitationem, quam magnam deleniti, recusandae cum sed a natus
+        quibusdam sint.
+      </p>
+    </div>
+    <button id="aficher">Aficher</button>
+    <button id="hide">hide</button>
+    <input type="text" id="z1">
+    <input type="text" id="z2">
+    
+    <button id="addition">Addition</button>
+  </body>
+  <script>
+    $("#button1").click(function () {
+      alert("Bonjeur");
+    });
+    $("#button2").click(function () {
+      $("div h1,div p").toggleClass("titre");
+    });
+
+    $("p").click(function () {
+      $(this).addClass("red");
+    });
+    $("body").append($("<p></p>").text("Bonjeur"));
+    $("body").append($("<div>A</div>").css("background-color", "red"));
+    $("body").append($("<div>B</div>").css("background-color", "green"));
+    $("#aficher").click(function () {
+      $("p").show();
+    });
+    $("#hide").click(function () {
+      $("p").hide();
+    });
+    $("#addition").click(function () {
+    let expression = $("#z1").val() +"+"+ $("#z2").val(); // Ex: "10+5"
+    let result = eval(expression);
+    console.log(result); // 15
+});
+
+  </script>
+</html>
