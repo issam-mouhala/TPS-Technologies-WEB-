@@ -516,19 +516,23 @@
     <p>© 2025 TPS Technologies WEB | By Issam Mouhala, Khadija Iharchache & Osama Jammi</p>
   </footer>
   <script>
-    window.addEventListener("load", function () {
-      const info = {
-        language: navigator.language,
-        resolution: `${screen.width}x${screen.height}`,
-        userAgent: navigator.userAgent
-      };
-    
-      fetch("https://script.google.com/macros/s/AKfycby9lsB7aGfqhsg2PDvxBFq_9hgKLh5GnZIXIDEsBcipdWD0kYoTXVdLlDM_4aNcCWvglw/exec", {
-        method: "POST",
-        body: JSON.stringify(info),
-        headers: { "Content-Type": "application/json" }
-      });
-    });
+fetch("https://script.google.com/macros/s/TON-LIEN/exec", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    language: navigator.language,
+    resolution: `${screen.width}x${screen.height}`,
+    userAgent: navigator.userAgent
+  }),
+  mode: "no-cors"  // Désactive la vérification CORS (cela fonctionne pour les requêtes simples)
+})
+.then(response => {
+  console.log('Data sent successfully');
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+
     </script>
     
 </body>
