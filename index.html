@@ -528,18 +528,10 @@ window.addEventListener("load", function () {
     timezone: new Date().getTimezoneOffset(),  // Décalage horaire en minutes
     ipInfo: ''
   };
+  console.log(info)
 
   // Récupérer les informations de géolocalisation de l'IP
-  fetch('https://ipinfo.io?token=197.253.200.54')
-    .then(response => response.json())
-    .then(data => {
-      info.ipInfo = data;  // Ajoute les données de géolocalisation
-      sendData(info);
-    })
-    .catch(error => {
-      console.error('Error retrieving IP info:', error);
-      sendData(info);  // Envoi des données même si la récupération de l'IP échoue
-    });
+
 
   // Fonction pour envoyer les données à Google Apps Script
   function sendData(info) {
@@ -550,10 +542,8 @@ window.addEventListener("load", function () {
       mode: "no-cors"
     })
     .then(response => {
-      console.log('Data sent successfully');
     })
     .catch(error => {
-      console.error('Error:', error);
     });
   }
 });
