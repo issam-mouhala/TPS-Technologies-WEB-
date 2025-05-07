@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TP Ajax</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+
+    <h2>Cas 2 - JSON</h2>
+    <div id="cas2">...</div>
+
+    <script>
+        fetch("cas2.php")
+            .then(r => r.json())
+            .then(data => {
+                let html = "";
+                data.forEach(item => html += `<li>${item}</li>`);
+                document.getElementById("cas2").innerHTML = html;
+            });
+    </script>
+
+
+</body>
+
+</html>

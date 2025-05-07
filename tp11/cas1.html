@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TP Ajax</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Cas 1 - Chargement automatique (5s)</h2>
+    <div id="cas1">...Chargement...</div>
+
+    <script>
+        setTimeout(() => {
+            fetch("cas1.php")
+                .then(r => r.text())
+                .then(html => document.getElementById("cas1").innerHTML = html);
+        }, 5000);
+    </script>
+
+
+</body>
+
+</html>

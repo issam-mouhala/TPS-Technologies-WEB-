@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TP Ajax</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>API Externe</h2>
+    <table id="apiTable" border="1">
+        <tr>
+            <th>Email</th>
+            <th>Avatar</th>
+        </tr>
+    </table>
+
+    <script>
+        fetch("https://reqres.in/api/users")
+            .then(r => r.json())
+            .then(res => {
+                res.data.forEach(user => {
+                    document.getElementById("apiTable").innerHTML += `
+                        <tr>
+                            <td>${user.email}</td>
+                            <td><img src="${user.avatar}" width="50"></td>
+                        </tr>
+                    `;
+                });
+            });
+    </script>
+</body>
+
+</html>
