@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TP Ajax</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Cas 1 - Bouton de chargement</h2>
+    <button onclick="chargerCas1()">Charger</button>
+    <div id="cas1Btn">...</div>
+
+    <script>
+        function chargerCas1() {
+            fetch("cas1.php")
+                .then(r => r.text())
+                .then(html => document.getElementById("cas1Btn").innerHTML = html);
+        }
+    </script>
+
+
+</body>
+
+</html>

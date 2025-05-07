@@ -2,539 +2,582 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TPS Technologies WEB</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #eceff1, #f5f5f5);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPS Technologies WEB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #eceff1, #f5f5f5);
+        }
+        
+        .navbar {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sol {
+            background-color: rgb(139, 194, 231);
+            border: 0;
+        }
+        
+        .title {
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+            transform: translateX(-80px);
+        }
+        
+        .tp-card {
+            border: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 12px;
+            background: #fff;
+        }
+        
+        .tp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+        
+        .tp-card h5 {
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .btn-group {
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .btn-custom {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+            text-align: left;
+            transition: 0.3s;
+        }
+        
+        .btn-custom:hover {
+            opacity: 0.8;
+        }
+        
+        .col-md-6 {
+            width: 550px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background: #222;
+            color: #fff;
+            font-size: 14px;
+        }
+        
+        .dropdown-menu {
+            z-index: 2;
+        }
+        
+        @media screen and (max-width: 1080px) {
+            .d-flex {
+                flex-direction: column;
+            }
+            .title {
+                transform: translateX(10px);
+            }
+        }
+    </style>
 
-    .navbar {
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-.sol{
-  background-color: rgb(139, 194, 231);
-  border: 0;
-}
-    
-
-    .title {
-      text-align: center;
-      padding: 20px;
-      font-weight: bold;
-      color: #333;
-      text-transform: uppercase;
-      transform: translateX(-80px);
-
-    }
-  
-    
-
-    .tp-card {
-      border: none;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      border-radius: 12px;
-      background: #fff;
-      
-    
-    }
-
-    .tp-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-      z-index: 2;
-    }
-
-    .tp-card h5 {
-      font-weight: bold;
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    .btn-group {
-      width: 100%;
-      padding: 10px;
-    }
-
-    .btn-custom {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      width: 100%;
-      text-align: left;
-      transition: 0.3s;
-    }
-
-    .btn-custom:hover {
-      opacity: 0.8;
-    }
-    .col-md-6{
-      width:550px ;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-      background: #222;
-      color: #fff;
-      font-size: 14px;
-    }
-    .dropdown-menu{
-      z-index: 2;
-    }
-    @media screen and (max-width: 1080px) {
-     
-      .d-flex{
-        flex-direction: column;
-      }
-.title{
-  transform: translateX(10px);
-}
-    }
-
-  </style>
-  
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">TPS Technologies web </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">TPS Technologies web </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="./index.html">Accueil</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="./index.html">Accueil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <div class="container mt-4">
-    <h1 class="title">Les Travaux Pratiques<sub>.</sub></h1>
-    <div class="row g-4">
+    <div class="container mt-4">
+        <h1 class="title">Les Travaux Pratiques<sub>.</sub></h1>
+        <div class="row g-4">
 
-      <!-- Exemple de carte TP -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card tp-card p-3">
-          <h5>TP1 : HTML & CSS</h5>
-          <div class="d-flex justify-content-between">
+            <!-- Exemple de carte TP -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP1 : HTML & CSS</h5>
+                    <div class="d-flex justify-content-between">
 
-            <!-- Dropdown Voir TP -->
-            <div class="btn-group">
-              <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                        <!-- Dropdown Voir TP -->
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir TP
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp1/enonce/ex1.png" target="_blank">Exercice 1</a></li>
-                <li><a class="dropdown-item" href="./tp1/enonce/ex2.png" target="_blank">Exercice 2</a></li>
-                <li><a class="dropdown-item" href="./tp1/enonce/ex3.png" target="_blank">Exercice 3</a></li>
-                <li><a class="dropdown-item" href="./tp1/enonce/ex4.png" target="_blank">Exercice 4</a></li>
-                <li><a class="dropdown-item" href="./tp1/enonce/ex5.png" target="_blank">Exercice 5</a></li>
-              </ul>
-            </div>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp1/enonce/ex1.png" target="_blank">Exercice 1</a></li>
+                                <li><a class="dropdown-item" href="./tp1/enonce/ex2.png" target="_blank">Exercice 2</a></li>
+                                <li><a class="dropdown-item" href="./tp1/enonce/ex3.png" target="_blank">Exercice 3</a></li>
+                                <li><a class="dropdown-item" href="./tp1/enonce/ex4.png" target="_blank">Exercice 4</a></li>
+                                <li><a class="dropdown-item" href="./tp1/enonce/ex5.png" target="_blank">Exercice 5</a></li>
+                            </ul>
+                        </div>
 
-            <div class="btn-group">
-              <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                        <div class="btn-group">
+                            <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir solution
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp1/tp.html" target="_blank">Exercice 1</a></li>
-                <li><a class="dropdown-item" href="./tp1/tp1-ex2.html" target="_blank">Exercice 2</a></li>
-                <li><a class="dropdown-item" href="./tp1/tp-ex3.html" target="_blank">Exercice 3</a></li>
-                <li><a class="dropdown-item" href="./tp1/tp-ex4.html" target="_blank">Exercice 4</a></li>
-                <li><a class="dropdown-item" href="./tp1/tp-ex5.html" target="_blank">Exercice 5</a></li>
-              </ul>
-            </div>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp1/tp.html" target="_blank">Exercice 1</a></li>
+                                <li><a class="dropdown-item" href="./tp1/tp1-ex2.html" target="_blank">Exercice 2</a></li>
+                                <li><a class="dropdown-item" href="./tp1/tp-ex3.html" target="_blank">Exercice 3</a></li>
+                                <li><a class="dropdown-item" href="./tp1/tp-ex4.html" target="_blank">Exercice 4</a></li>
+                                <li><a class="dropdown-item" href="./tp1/tp-ex5.html" target="_blank">Exercice 5</a></li>
+                            </ul>
+                        </div>
 
-            <!-- Dropdown Code Source -->
-            <div class="btn-group">
-              <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                        <!-- Dropdown Code Source -->
+                        <div class="btn-group">
+                            <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-code-slash"></i> Code source
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp1/tp.txt" target="_blank">Code Exercice 1</a></li>
-                <li><a class="dropdown-item" href="./tp1/tp1-ex2.txt" target="_blank">Code Exercice 2</a></li>
-                <li><a class="dropdown-item" href="./tp1/tp-ex3.txt" target="_blank">Code Exercice 3</a></li>
-                <li><a class="dropdown-item" href="./tp1/tp-ex4.txt" target="_blank">Code Exercice 4</a></li>
-                <li><a class="dropdown-item" href="./tp1/tp-ex5.txt" target="_blank">Code Exercice 5</a></li>
-              </ul>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp1/tp.txt" target="_blank">Code Exercice 1</a></li>
+                                <li><a class="dropdown-item" href="./tp1/tp1-ex2.txt" target="_blank">Code Exercice 2</a></li>
+                                <li><a class="dropdown-item" href="./tp1/tp-ex3.txt" target="_blank">Code Exercice 3</a></li>
+                                <li><a class="dropdown-item" href="./tp1/tp-ex4.txt" target="_blank">Code Exercice 4</a></li>
+                                <li><a class="dropdown-item" href="./tp1/tp-ex5.txt" target="_blank">Code Exercice 5</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-          </div>
-        </div>
-      </div>
+            <!-- Ajouter d'autres TPs ici -->
 
-      <!-- Ajouter d'autres TPs ici -->
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card tp-card p-3">
-          <h5>TP2 : HTML & CSS (Suite)</h5>
-          <div class="d-flex justify-content-between">
-            <div class="btn-group">
-              <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP2 : HTML & CSS (Suite)</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir TP
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp2/enonce/ex1.png" target="_blank">Exercice 1</a></li>
-                <li><a class="dropdown-item" href="./tp2/enonce/ex2.png" target="_blank">Exercice 2</a></li>
-                <li><a class="dropdown-item" href="./tp2/enonce/ex3.png" target="_blank">Exercice 3</a></li>
-                <li><a class="dropdown-item" href="./tp2/enonce/ex4.png" target="_blank">Exercice 4</a></li>
-                <li><a class="dropdown-item" href="./tp2/enonce/ex5.png" target="_blank">Exercice 5</a></li>
-              </ul>
-            </div>
-            <div class="btn-group">
-              <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp2/enonce/ex1.png" target="_blank">Exercice 1</a></li>
+                                <li><a class="dropdown-item" href="./tp2/enonce/ex2.png" target="_blank">Exercice 2</a></li>
+                                <li><a class="dropdown-item" href="./tp2/enonce/ex3.png" target="_blank">Exercice 3</a></li>
+                                <li><a class="dropdown-item" href="./tp2/enonce/ex4.png" target="_blank">Exercice 4</a></li>
+                                <li><a class="dropdown-item" href="./tp2/enonce/ex5.png" target="_blank">Exercice 5</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class=" bi bi-eye"></i> Voir solution
               </button>
-              <ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
 
-                <li><a class="dropdown-item" href="./tp2/tableau.html">Exercice 1</a></li>
-                <li><a class="dropdown-item" href="./tp2/forme.html">Exercice 2</a></li>
-                <li><a class="dropdown-item" href="./tp2/bordures.html">Exercice 3</a></li>
-                <li><a class="dropdown-item" href="./tp2/ex4.html">Exercice 4</a></li>
-                <li><a class="dropdown-item" href="./tp2/ex5.html">Exercice 5</a></li>
-              </ul>
-            </div>
+                                <li><a class="dropdown-item" href="./tp2/tableau.html">Exercice 1</a></li>
+                                <li><a class="dropdown-item" href="./tp2/forme.html">Exercice 2</a></li>
+                                <li><a class="dropdown-item" href="./tp2/bordures.html">Exercice 3</a></li>
+                                <li><a class="dropdown-item" href="./tp2/ex4.html">Exercice 4</a></li>
+                                <li><a class="dropdown-item" href="./tp2/ex5.html">Exercice 5</a></li>
+                            </ul>
+                        </div>
 
-            <div class="btn-group">
-              <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                        <div class="btn-group">
+                            <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-code-slash"></i> Code source
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp2/tableau copy.txt">Code Exercice 1</a></li>
-                <li><a class="dropdown-item" href="./tp2/forme copy.txt">Code Exercice 2</a></li>
-                <li><a class="dropdown-item" href="./tp2/bordures.txt">Code Exercice 3</a></li>
-                <li><a class="dropdown-item" href="./tp2/ex4.txt">Code Exercice 4</a></li>
-                <li><a class="dropdown-item" href="/tp2/ex5.txt">Code Exercice 5</a></li>
-              </ul>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp2/tableau copy.txt">Code Exercice 1</a></li>
+                                <li><a class="dropdown-item" href="./tp2/forme copy.txt">Code Exercice 2</a></li>
+                                <li><a class="dropdown-item" href="./tp2/bordures.txt">Code Exercice 3</a></li>
+                                <li><a class="dropdown-item" href="./tp2/ex4.txt">Code Exercice 4</a></li>
+                                <li><a class="dropdown-item" href="/tp2/ex5.txt">Code Exercice 5</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card tp-card p-3">
-          <h5>TP3 : Les feuilles de style CSS</h5>
-          <div class="d-flex justify-content-between">
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP3 : Les feuilles de style CSS</h5>
+                    <div class="d-flex justify-content-between">
 
 
 
-            <div class="btn-group">
-              <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir TP
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp3/enonce/ex1.png" target="_blank">Exercice 1</a></li>
-                <li><a class="dropdown-item" href="./tp3/enonce/ex2.png" target="_blank">Exercice 2</a></li>
-                <li><a class="dropdown-item" href="./tp3/enonce/ex3.png" target="_blank">Exercice 3</a></li>
-                <li><a class="dropdown-item" href="./tp3/enonce/ex4.png" target="_blank">Exercice 4</a></li>
-                <li><a class="dropdown-item" href="./tp3/enonce/ex5.png" target="_blank">Exercice 5</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp3/enonce/ex1.png" target="_blank">Exercice 1</a></li>
+                                <li><a class="dropdown-item" href="./tp3/enonce/ex2.png" target="_blank">Exercice 2</a></li>
+                                <li><a class="dropdown-item" href="./tp3/enonce/ex3.png" target="_blank">Exercice 3</a></li>
+                                <li><a class="dropdown-item" href="./tp3/enonce/ex4.png" target="_blank">Exercice 4</a></li>
+                                <li><a class="dropdown-item" href="./tp3/enonce/ex5.png" target="_blank">Exercice 5</a></li>
 
-              </ul>
-            </div>
+                            </ul>
+                        </div>
 
 
-            <div class="btn-group">
-              <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                        <div class="btn-group">
+                            <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir solution
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp3/ex1.html">Exercice 1</a></li>
-                <li><a class="dropdown-item" href="./tp3/ex2.html">Exercice 2</a></li>
-                <li><a class="dropdown-item" href="./tp3/ex3.html">Exercice 3</a></li>
-                <li><a class="dropdown-item" href="./tp3/ex4.html">Exercice 4</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp3/ex1.html">Exercice 1</a></li>
+                                <li><a class="dropdown-item" href="./tp3/ex2.html">Exercice 2</a></li>
+                                <li><a class="dropdown-item" href="./tp3/ex3.html">Exercice 3</a></li>
+                                <li><a class="dropdown-item" href="./tp3/ex4.html">Exercice 4</a></li>
 
-              </ul>
-            </div>
+                            </ul>
+                        </div>
 
 
 
-            <div class="btn-group">
-              <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                        <div class="btn-group">
+                            <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-code-slash"></i> Code source
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp3/ex1.txt">Code Exercice 1</a></li>
-                <li><a class="dropdown-item" href="./tp3/ex2.txt">Code Exercice 2</a></li>
-                <li><a class="dropdown-item" href="./tp3/ex3.txt">Code Exercice 3</a></li>
-                <li><a class="dropdown-item" href="./tp3/ex4.txt">Code Exercice 4</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp3/ex1.txt">Code Exercice 1</a></li>
+                                <li><a class="dropdown-item" href="./tp3/ex2.txt">Code Exercice 2</a></li>
+                                <li><a class="dropdown-item" href="./tp3/ex3.txt">Code Exercice 3</a></li>
+                                <li><a class="dropdown-item" href="./tp3/ex4.txt">Code Exercice 4</a></li>
 
-              </ul>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-          </div>
-        </div>
-      </div>
 
-   
-      <div class="col-md-6 col-lg-4">
-        <div class="card tp-card p-3">
-          <h5>TP4 : Mini-projet : pricing panel project 
-          </h5>
-          <div class="d-flex justify-content-between">
-            <div class="btn-group">
-             
-              <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP4 : Mini-projet : pricing panel project
+                    </h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="btn-group">
+
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir TP
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp4/image.png" target="_blank">Mini project</a></li>
-              </ul>
-            
-            </div>
-            <div class="btn-group">
-              <a class="dropdown-item" href="./tp4/index.html" target="_blank">
-              <button class="sol btn btn-primary btn-custom dropdown-toggle" >
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp4/image.png" target="_blank">Mini project</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="btn-group">
+                            <a class="dropdown-item" href="./tp4/index.html" target="_blank">
+                                <button class="sol btn btn-primary btn-custom dropdown-toggle">
                 <i class="bi bi-eye"></i> Voir solution
               </button>
-              </a>
-             
-            </div>
+                            </a>
 
-            <div class="btn-group">
-            <a href="./tp4/index.txt" target="_blank" >
-              <button class="btn btn-warning btn-custom dropdown-toggle" >
+                        </div>
+
+                        <div class="btn-group">
+                            <a href="./tp4/index.txt" target="_blank">
+                                <button class="btn btn-warning btn-custom dropdown-toggle">
                 <i class="bi bi-code-slash"></i> Code source
               </button>
-            </a>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card tp-card p-3">
-          <h5>TP5 : Les fondamentaux JavaScript</h5>
-          <div class="d-flex justify-content-between">
-            <div class="btn-group">
-              <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP5 : Les fondamentaux JavaScript</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir TP
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp5/TP5_JavaScript les fondamentaux.pdf" target="_blank">Les fondamentaux JavaScript</a></li>
-              </ul>
-            </div>
-            <div class="btn-group">
-              <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp5/TP5_JavaScript les fondamentaux.pdf" target="_blank">Les fondamentaux JavaScript</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir solution
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp5/index.html" target="_blank">Les fondamentaux JavaScript  </a></li>
-              </ul>
-            </div>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp5/index.html" target="_blank">Les fondamentaux JavaScript  </a></li>
+                            </ul>
+                        </div>
 
-            <div class="btn-group">
-              <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                        <div class="btn-group">
+                            <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-code-slash"></i> Code source
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp5/index.txt" target="_blank">Code Les fondamentaux JavaScript</a></li>
-              </ul>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp5/index.txt" target="_blank">Code Les fondamentaux JavaScript</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card tp-card p-3">
-          <h5>TP6 : Manipuler les éléments d’une page avec dom</h5>
-          <div class="d-flex justify-content-between">
-            <div class="btn-group">
-              <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP6 : Manipuler les éléments d’une page avec dom</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir TP
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp6/TP6_Comprendre l’arbre DOM et Gestion des événements utilisateur.pdf" target="_blank">Code les éléments d’une page avec domt</a></li>
-                <li><a class="dropdown-item" href="./tp6/tp-dom/tp dom.pdf" target="_blank">Code DOM</a></li>
-              </ul>
-            </div>
-            <div class="btn-group">
-              <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp6/TP6_Comprendre l’arbre DOM et Gestion des événements utilisateur.pdf" target="_blank">Code les éléments d’une page avec domt</a></li>
+                                <li><a class="dropdown-item" href="./tp6/tp-dom/tp dom.pdf" target="_blank">Code DOM</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir solution
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp6/index.html" target="_blank">les éléments d’une page avec dom  </a></li>
-                <li><a class="dropdown-item" href="./tp6/tp-dom/index.html" target="_blank"> DOM</a></li>
-              </ul>
-            </div>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp6/index.html" target="_blank">les éléments d’une page avec dom  </a></li>
+                                <li><a class="dropdown-item" href="./tp6/tp-dom/index.html" target="_blank"> DOM</a></li>
+                            </ul>
+                        </div>
 
-            <div class="btn-group">
-              <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                        <div class="btn-group">
+                            <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-code-slash"></i> Code source
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp6/index.txt" target="_blank">Code les éléments d’une page avec domt</a></li>
-                <li><a class="dropdown-item" href="./tp6/tp-dom/index.txt" target="_blank">Code DOM</a></li>
-              </ul>
-            </div>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp6/index.txt" target="_blank">Code les éléments d’une page avec domt</a></li>
+                                <li><a class="dropdown-item" href="./tp6/tp-dom/index.txt" target="_blank">Code DOM</a></li>
+                            </ul>
+                        </div>
 
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card tp-card p-3">
-          <h5>TP8 : Sessions et cookies (PHP)</h5>
-          <div class="d-flex justify-content-between">
-            <div class="btn-group">
-              <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP8 : Sessions et cookies (PHP)</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir TP
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp7/TP8-php.pdf" target="_blank">TP°8 : Sessions, Authentification & Base de données en PHP</a></li>
-              </ul>
-            </div>
-            <div class="btn-group">
-              <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp7/TP8-php.pdf" target="_blank">TP°8 : Sessions, Authentification & Base de données en PHP</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir solution
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp7/image.png" target="_blank">Exercice1 : Sessions PHP(Menu)  </a></li>
-                <li><a class="dropdown-item" href="./tp7/image copy.png" target="_blank">Exercice1 : Sessions PHP(ouvrir_session)  </a></li>
-                <li><a class="dropdown-item" href="./tp7/image copy 2.png" target="_blank">Exercice1 : Sessions PHP(variable_session)  </a></li>
-                <li><a class="dropdown-item" href="./tp7/image copy 3.png" target="_blank">Exercice1 : Sessions PHP(Affichage_variable_session)  </a></li>
-                <li><a class="dropdown-item" href="./tp7/image copy 4.png" target="_blank">Exercice1 : Sessions PHP(supprimer_variables)  </a></li>
-                <li><a class="dropdown-item" href="./tp7/image copy 5.png" target="_blank">Exercice2 : Authentification PHP(login)  </a></li>
-                <li><a class="dropdown-item" href="./tp7/image copy 6.png" target="_blank">Exercice2 : Sessions Authentification(session+deconnexion)  </a></li>
-              </ul>
-            </div>
-    
-            <div class="btn-group">
-              <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp7/image.png" target="_blank">Exercice1 : Sessions PHP(Menu)  </a></li>
+                                <li><a class="dropdown-item" href="./tp7/image copy.png" target="_blank">Exercice1 : Sessions PHP(ouvrir_session)  </a></li>
+                                <li><a class="dropdown-item" href="./tp7/image copy 2.png" target="_blank">Exercice1 : Sessions PHP(variable_session)  </a></li>
+                                <li><a class="dropdown-item" href="./tp7/image copy 3.png" target="_blank">Exercice1 : Sessions PHP(Affichage_variable_session)  </a></li>
+                                <li><a class="dropdown-item" href="./tp7/image copy 4.png" target="_blank">Exercice1 : Sessions PHP(supprimer_variables)  </a></li>
+                                <li><a class="dropdown-item" href="./tp7/image copy 5.png" target="_blank">Exercice2 : Authentification PHP(login)  </a></li>
+                                <li><a class="dropdown-item" href="./tp7/image copy 6.png" target="_blank">Exercice2 : Sessions Authentification(session+deconnexion)  </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-code-slash"></i> Code source
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp7/tp8/menu.html" target="_blank">Menu</a></li>
-                <li><a class="dropdown-item" href="./tp7/tp8/ouvrir_session.php" target="_blank">ouvrir_session</a></li>
-                <li><a class="dropdown-item" href="./tp7/tp8/afficher_session.php" target="_blank">variable_session</a></li>
-                <li><a class="dropdown-item" href="./tp7/tp8/afficher_session.php" target="_blank">Affichage_variable_session</a></li>
-                <li><a class="dropdown-item" href="./tp7/tp8/supprimer_session.php" target="_blank">supprimer_variables</a></li>
-                <li><a class="dropdown-item" href="./tp7/tp8/login.php" target="_blank">login</a></li>
-                <li><a class="dropdown-item" href="./tp7/tp8/deconexion.php" target="_blank">deconnexion</a></li>
-                <li><a class="dropdown-item" href="./tp7/tp8/session.php" target="_blank">session</a></li>
-              </ul>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp7/tp8/menu.html" target="_blank">Menu</a></li>
+                                <li><a class="dropdown-item" href="./tp7/tp8/ouvrir_session.php" target="_blank">ouvrir_session</a></li>
+                                <li><a class="dropdown-item" href="./tp7/tp8/afficher_session.php" target="_blank">variable_session</a></li>
+                                <li><a class="dropdown-item" href="./tp7/tp8/afficher_session.php" target="_blank">Affichage_variable_session</a></li>
+                                <li><a class="dropdown-item" href="./tp7/tp8/supprimer_session.php" target="_blank">supprimer_variables</a></li>
+                                <li><a class="dropdown-item" href="./tp7/tp8/login.php" target="_blank">login</a></li>
+                                <li><a class="dropdown-item" href="./tp7/tp8/deconexion.php" target="_blank">deconnexion</a></li>
+                                <li><a class="dropdown-item" href="./tp7/tp8/session.php" target="_blank">session</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-    
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card tp-card p-3">
-          <h5>TP9 :     PHP et MySQL (PDO)          </h5>
-          <div class="d-flex justify-content-between">
-            <div class="btn-group">
-              <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP9 : PHP et MySQL (PDO) </h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir TP
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp9/tp9/Exempl1_PHPMYSQL_A_Faire_Et.pdf" target="_blank">TP°9 : Gestion de base de données MySQL en PHP</a></li>
-              </ul>
-            </div>
-            <div class="btn-group">
-              <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp9/tp9/Exempl1_PHPMYSQL_A_Faire_Et.pdf" target="_blank">TP°9 : Gestion de base de données MySQL en PHP</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir solution
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp9/tp9/image copy 3.png" target="_blank">Exercice1 : Base de donnees  </a></li>
-                <li><a class="dropdown-item" href="./tp9/tp9/image.png" target="_blank">Exercice1 : livre  </a></li>
-                <li><a class="dropdown-item" href="./tp9/tp9//image copy.png" target="_blank">Exercice1 : modifier livre  </a></li>
-                <li><a class="dropdown-item" href="./tp9/tp9/image copy 2.png" target="_blank">Exercice1 :supprimer </a></li>
-              </ul>
-            </div>
-    
-            <div class="btn-group">
-              <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp9/tp9/image copy 3.png" target="_blank">Exercice1 : Base de donnees  </a></li>
+                                <li><a class="dropdown-item" href="./tp9/tp9/image.png" target="_blank">Exercice1 : livre  </a></li>
+                                <li><a class="dropdown-item" href="./tp9/tp9//image copy.png" target="_blank">Exercice1 : modifier livre  </a></li>
+                                <li><a class="dropdown-item" href="./tp9/tp9/image copy 2.png" target="_blank">Exercice1 :supprimer </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-code-slash"></i> Code source
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp9/tp9/livre.sql" target="_blank">base de donnee</a></li>
-                <li><a class="dropdown-item" href="./tp9/tp9/livre.php" target="_blank">livre</a></li>
-                <li><a class="dropdown-item" href="./tp9/tp9/ajouter_livre.php" target="_blank">Ajouter livre</a></li>
-                <li><a class="dropdown-item" href="./tp9/tp9/modifier_livre.php" target="_blank">modifier</a></li>
-                <li><a class="dropdown-item" href="./tp9/tp9/supprimer.php" target="_blank">sipprimer</a></li>
-             
-              </ul>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp9/tp9/livre.sql" target="_blank">base de donnee</a></li>
+                                <li><a class="dropdown-item" href="./tp9/tp9/livre.php" target="_blank">livre</a></li>
+                                <li><a class="dropdown-item" href="./tp9/tp9/ajouter_livre.php" target="_blank">Ajouter livre</a></li>
+                                <li><a class="dropdown-item" href="./tp9/tp9/modifier_livre.php" target="_blank">modifier</a></li>
+                                <li><a class="dropdown-item" href="./tp9/tp9/supprimer.php" target="_blank">sipprimer</a></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-    
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card tp-card p-3">
-          <h5>TP10 :        jQuery et Ajax          </h5>
-          <div class="d-flex justify-content-between">
-            <div class="btn-group">
-              <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP10 : jQuery et Ajax </h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir TP
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp10/TP6_JQUERY.pdf" target="_blank">TP°10 : Jquery & ajax</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp10/TP6_JQUERY.pdf" target="_blank">TP°10 : Jquery & ajax</a></li>
 
-              </ul>
-            </div>
-            <div class="btn-group">
-              <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-eye"></i> Voir solution
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp10/image copy.png" target="_blank">Activite1 : jQuery</a></li>
-                <li><a class="dropdown-item" href="./tp10/image.png" target="_blank">Activite2 : jQuery&AJAX</a></li>
-                
-              </ul>
-            </div>
-    
-            <div class="btn-group">
-              <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp10/image copy.png" target="_blank">Activite1 : jQuery</a></li>
+                                <li><a class="dropdown-item" href="./tp10/image.png" target="_blank">Activite2 : jQuery&AJAX</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="bi bi-code-slash"></i> Code source
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tp10/a1.html" target="_blank">jquery </a></li>
-                <li><a class="dropdown-item" href="./tp10/a2.html" target="_blank">Ajax </a></li>
-             
-              </ul>
-            </div>
-    
-          </div>
-        </div>
-      </div>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp10/a1.html" target="_blank">jquery </a></li>
+                                <li><a class="dropdown-item" href="./tp10/a2.html" target="_blank">Ajax </a></li>
 
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card tp-card p-3">
+                    <h5>TP11 : Codes Ajax à tester </h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="bi bi-eye"></i> Voir TP
+              </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp11/TP8 - pratiquer Ajax (1).pdf" target="_blank">TP°11 : Codes Ajax à tester
+                                </a></li>
+
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button class="sol btn btn-primary btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="bi bi-eye"></i> Voir solution
+              </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp11/image.png" target="_blank">Cas 1 : setTimeout 5s</a></li>
+                                <li><a class="dropdown-item" href="./tp11/image copy.png" target="_blank">Cas 1 - Version jQuery</a></li>
+                                <li><a class="dropdown-item" href="./tp11/image copy 3.png" target="_blank">Cas 1 - Bouton de chargement</a></li>
+                                <li><a class="dropdown-item" href="./tp11/image copy 2.png" target="_blank">Cas 2 - JSON</a></li>
+                                <li><a class="dropdown-item" href="./tp11/image copy 4.png" target="_blank">API Externe</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button class="btn btn-warning btn-custom dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="bi bi-code-slash"></i> Code source
+              </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./tp11/cas1.html" target="_blank">Cas 1 : setTimeout 5s</a></li>
+                                <li><a class="dropdown-item" href="./tp11/cas1-version-jquery.html" target="_blank">Cas 1 - Version jQuery</a></li>
+                                <li><a class="dropdown-item" href="./tp11/cas-button.html" target="_blank">Cas 1 - Bouton de chargement</a></li>
+                                <li><a class="dropdown-item" href="./tp11/cas-version-JSON.html" target="_blank">Cas 2 - JSON</a></li>
+                                <li><a class="dropdown-item" href="./tp11/API-externe.html" target="_blank">API Externe</a></li>
+                                <li><a class="dropdown-item" href="./tp11/cas1.php" target="_blank">PHP cas 1</a></li>
+                                <li><a class="dropdown-item" href="./tp11/cas2.php" target="_blank">PHP cas 2</a></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
 
-  <footer class="footer">
-    <p>© 2025 TPS Technologies WEB | By Issam Mouhala, Khadija Iharchache & Osama Jammi</p>
-  </footer>
-  <script>
-fetch("https://script.google.com/macros/s/AKfycby9lsB7aGfqhsg2PDvxBFq_9hgKLh5GnZIXIDEsBcipdWD0kYoTXVdLlDM_4aNcCWvglw/exec", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    language: navigator.language,
-    resolution: `${screen.width}x${screen.height}`,
-    userAgent: navigator.userAgent
-  }),
-  mode: "no-cors"  // Désactive la vérification CORS (cela fonctionne pour les requêtes simples)
-})
-.then(response => {
-  console.log('Data sent successfully');
-})
-.catch(error => {
-  console.error('Error:', error);
-});
-
+    <footer class="footer">
+        <p>© 2025 TPS Technologies WEB | By Issam Mouhala, Khadija Iharchache & Osama Jammi</p>
+    </footer>
+    <script>
+        fetch("https://script.google.com/macros/s/AKfycby9lsB7aGfqhsg2PDvxBFq_9hgKLh5GnZIXIDEsBcipdWD0kYoTXVdLlDM_4aNcCWvglw/exec", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    language: navigator.language,
+                    resolution: `${screen.width}x${screen.height}`,
+                    userAgent: navigator.userAgent
+                }),
+                mode: "no-cors" // Désactive la vérification CORS (cela fonctionne pour les requêtes simples)
+            })
+            .then(response => {
+                console.log('Data sent successfully');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     </script>
-    
+
 </body>
 
 </html>
